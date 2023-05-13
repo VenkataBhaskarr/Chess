@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route , Routes , Link} from "react-router-dom";
+import Gameui from './Game/Gameui'
+import ChessboardJs from 'react-chessboardjs-wrapper'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        I am god and visible to all
+
+
+        <br></br>
+        <Routes>
+            <Route path="/gameui/:id/:color" element={<Gameui/>}/>
+        </Routes>
+      
+        play game <Link to="/gameui/123/white">game</Link>
     </div>
   );
 }
